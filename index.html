@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Student Portfolio</title>
+    <style>
+        :root {
+            --primary-bg: #f8fafc;
+            --accent-color: #0f172a;
+            --secondary-color: #3b82f6;
+            --text-main: #334155;
+            --card-white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            background-color: var(--primary-bg);
+            color: var(--text-main);
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: var(--accent-color);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background: white;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        nav a {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .container { max-width: 1100px; margin: 2rem auto; padding: 0 20px; }
+        section { margin-bottom: 4rem; }
+        h2 { text-align: center; color: var(--accent-color); margin-bottom: 2rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
+
+        /* 3-Column Grid */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card-white);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        .card-img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; background: #e2e8f0; margin-bottom: 1rem; }
+        
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1rem; }
+        .video-wrapper iframe { position: absolute; top:0; left:0; width:100%; height:100%; border-radius: 8px; border: none; }
+
+        .btn-action {
+            display: block; width: fit-content; margin: 2rem auto;
+            background: var(--secondary-color); color: white;
+            padding: 12px 30px; text-decoration: none; border-radius: 30px; font-weight: bold;
+            border: none; cursor: pointer;
+        }
+
+        footer { text-align: center; padding: 2rem; background: #1e293b; color: #cbd5e1; margin-top: 4rem; }
+
+        /* Form Styling */
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Portfolio</h1>
+    <p>2nd Year Information Technology Student</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#memories">Memories</a>
+    <a href="#videos">Videos</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p style="text-align: center; max-width: 750px; margin: 0 auto; font-size: 1.1rem;">
+            I'm Paul John T. Malba jr. Currently at BSIT 2 student at Central Philippines State University at Moises Padilla, I am a good leader at group project and i am a cooperative student
+        </p>
+    </section>
+
+    <section id="memories">
+        <h2>My Memories</h2>
+        <div class="grid-3">
+            <div class="card">
+                <img src="Paul1.jpg" class="card-img" alt="Poster Contest">
+                <p><strong>Poster Contest</strong> - Representing the IT Department in creative design.</p>
+            </div>
+            <div class="card">
+                <img src="Paul2.jpg" class="card-img" alt="Achievement">
+                <p><strong>Achievement</strong> - Proudly receiving my certificate award for academic excellence.</p>
+            </div>
+            <div class="card">
+                <img src="Paul3.jpg" class="card-img" alt="Fiber Wiring">
+                <p><strong>Activity</strong> - Hands-on experience with fiber optic wiring and networking.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="videos">
+        <h2>Videos</h2>
+        <div class="grid-3">
+            <div class="card"><div class="video-wrapper"><iframe src="Paulvid1.mp4"></iframe></div><p>Project Demo 1</p></div>
+            <div class="card"><div class="video-wrapper"><iframe src="Paulvid2.mp4"></iframe></div><p>Coding Tutorial</p></div>
+            <div class="card"><div class="video-wrapper"><iframe src="Paulvid3.mp4"></iframe></div><p>Tech Vlog</p></div>
+        </div>
+    </section>
+
+    <section id="certificates">
+        <h2>Certificates</h2>
+        <div class="grid-3">
+            <div class="card">
+                <img src="Cert01.jpg" class="card-img" alt="Seminar">
+                <h3>Seminar</h3>
+                <p>Certificate 01</p>
+            </div>
+            <div class="card">
+                <img src="Cert02.jpg" class="card-img" alt="Seminar">
+                <h3>Seminar</h3>
+                <p>Certificate 02</p>
+            </div>
+            <div class="card">
+                <img src="Cert03.jpg" class="card-img" alt="Seminar">
+                <h3>Seminar</h3>
+                <p>Certificate 03</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume">
+        <h2>Resume</h2>
+        <p style="text-align: center;">Click below to view my professional background and technical skills.</p>
+        <a href="https://canva.link/uwkoyu50tmbe6kv" class="btn-action" target="_blank">View My Resume</a>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="grid-3">
+            <div class="card" style="grid-column: span 2;">
+                <h3>Send a Message</h3>
+                <form action="https://formspree.io/f/your-id" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn-action" style="margin: 0; width: 100%;">Send Message</button>
+                </form>
+            </div>
+            <div class="card">
+                <h3>Connect Info</h3>
+                <p><strong>Email:</strong><br>pauljohnmalba671@gmail.com</p>
+                <p><strong>Phone number:</strong><br><a href="#" style="color: var(--secondary-color);">09933993319</a></p>
+                <p><strong>Facebook:</strong><br><a href="#" style="color: var(--secondary-color);">https://www.facebook.com/share/1Au8CySUnR/</a></p>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 | IT Student Portfolio</p>
+</footer>
+
+</body>
+</html>
